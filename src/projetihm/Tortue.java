@@ -5,11 +5,16 @@
  */
 package projetihm;
 
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+
 /**
  *
  * @author p1511158
  */
 public class Tortue {
+
     String espece;
     String nom;
     int age;
@@ -17,20 +22,30 @@ public class Tortue {
     int taille;
     String sexe;
     int prix;
-    public Tortue(String e, String n, int a, int po, int t, String s, int pr)
-    {
-        this.espece=e;
-        this.nom=n;
-        this.age=a;
-        this.poids=po;
-        this.taille=t;
-        this.sexe=s;
-        this.prix=pr;
+
+    public Tortue(String e, String n, int a, int po, int t, String s, int pr) {
+        this.espece = e;
+        this.nom = n;
+        this.age = a;
+        this.poids = po;
+        this.taille = t;
+        this.sexe = s;
+        this.prix = pr;
     }
-    
-    @Override
-    public String toString()
-    {
-        return("Nom: "+nom+" Espece: "+espece+" Age :"+age+"ans Poids: "+poids+"kg Taille: "+taille+" Sexe: "+sexe+" Prix: "+prix+"$");
+
+    public JPanel toPanel() {
+        JPanel rep;
+        rep = new JPanel();
+        rep.setPreferredSize(new Dimension(600, 125));
+        rep.setLayout(new GridLayout(7, 1));
+        rep.add(new JLabel("Nom: " + nom));
+        rep.add(new JLabel("Espece: " + espece));
+        rep.add(new JLabel("Age :" + age + "ans"));
+        rep.add(new JLabel("Poids: " + poids + "kg"));
+        rep.add(new JLabel("Taille: " + taille));
+        rep.add(new JLabel("Sexe: " + sexe));
+        rep.add(new JLabel("Prix: " + prix + "$"));
+        rep.setBorder(new LineBorder(Color.GRAY, 1));
+        return rep;
     }
 }

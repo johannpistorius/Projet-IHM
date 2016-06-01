@@ -15,7 +15,7 @@ import javax.swing.*;
 public class PageVente extends JFrame {
 
     ArrayList<Tortue> tortue;
-    ArrayList<JLabel> label;
+    ArrayList<JPanel> panes;
     JPanel panel = new JPanel();
 
     public PageVente() {
@@ -34,11 +34,11 @@ public class PageVente extends JFrame {
         tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000));
         tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000));
 
-        label = new ArrayList<>();
+        panes = new ArrayList<>();
         for (Tortue t : tortue) {
-            label.add(new JLabel(t.toString()));
+            panes.add(t.toPanel());
         }
-        for (JLabel p : label) {
+        for (JPanel p : panes) {
             panel.add(p);
         }
     }
