@@ -12,35 +12,34 @@ import javax.swing.*;
  *
  * @author p1511158
  */
-public class PageVente extends JFrame{
+public class PageVente extends JFrame {
+
     ArrayList<Tortue> tortue;
     ArrayList<JLabel> label;
-    JPanel panel=new JPanel();
-    public PageVente()
-    {
+    JPanel panel = new JPanel();
+
+    public PageVente() {
         super("Page Vente");
         init();
+        setContentPane(panel);
+        setVisible(true);
     }
-    public final void init()
-    {
+
+    public final void init() {
         setSize(800, 1000);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setContentPane(panel);
-        setVisible(true);
-        
-        tortue=new ArrayList<>();
-        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120,"M", 1000));
-        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110,"F", 1000));
-        
-        label=new ArrayList<>();
-        for(Tortue t: tortue)
-        {
+
+        tortue = new ArrayList<>();
+        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000));
+        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000));
+
+        label = new ArrayList<>();
+        for (Tortue t : tortue) {
             label.add(new JLabel(t.toString()));
         }
-        for(int i=0;i<tortue.size();i++)
-        {
-            panel.add(label.get(i));
+        for (JLabel p : label) {
+            panel.add(p);
         }
     }
 }
