@@ -15,7 +15,9 @@ import javax.swing.*;
 public class PageVente extends JFrame {
 
     ArrayList<Tortue> tortue;
+    ArrayList<Tortue> tortueSel;
     JPanel panel = new JPanel();
+
     /**
      * Constructeur
      */
@@ -23,6 +25,7 @@ public class PageVente extends JFrame {
         super("Page Vente");
         init();
     }
+
     /**
      * Methode d'initialisation
      */
@@ -30,14 +33,31 @@ public class PageVente extends JFrame {
         setSize(800, 1000);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+
         tortue = new ArrayList<>();
-        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000,"images/Leonardo.jpg"));
-        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000,"images/Mathilda.jpg"));
-        
-        Affichage.afficherListe(panel, tortue);
-        
+        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda",
+                200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
+        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo",
+                150, 400, 120, "M", 1000, "images/Leonardo.jpg"));
+        tortueSel = tortue;
+        majAffichage();
+    }
+    
+    public void majAffichage(){
+        panel.removeAll();
+        panel.add(new BarreMenu(this));
+        Affichage.afficherListe(panel, tortueSel);
+
         setContentPane(panel);
         setVisible(true);
+    }
+
+    public ArrayList<Tortue> getListe() {
+        return tortueSel;
+    }
+
+    public void setListe(ArrayList<Tortue> l) {
+        tortueSel = l;
+        majAffichage();
     }
 }

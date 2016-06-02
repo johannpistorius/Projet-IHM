@@ -13,12 +13,7 @@ import java.util.*;
  */
 public class Tri {
     public static ArrayList<Tortue> triParNom(List<Tortue> l){
-        Collections.sort(l, new Comparator<Tortue>() {
-            @Override
-            public int compare(Tortue t1, Tortue t2){
-                return t1.nom.compareTo(t2.nom);
-            }
-        });
+        Collections.sort(l, (Tortue t1, Tortue t2) -> t1.nom.compareTo(t2.nom));
         return (ArrayList<Tortue>)l;
     }
 }
