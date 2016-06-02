@@ -7,7 +7,7 @@ package projetihm;
 
 /**
  *
- * @author p1511158
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class ProjetIHM {
 

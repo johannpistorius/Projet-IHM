@@ -10,7 +10,7 @@ import javax.swing.*;
 
 /**
  *
- * @author p1511158
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class PageVente extends JFrame {
 
@@ -21,18 +21,16 @@ public class PageVente extends JFrame {
     public PageVente() {
         super("Page Vente");
         init();
-        setContentPane(panel);
-        setVisible(true);
     }
 
     public final void init() {
         setSize(800, 1000);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        
         tortue = new ArrayList<>();
-        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000));
-        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000));
+        tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000,"images/Leonardo.jpg"));
+        tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000,"images/Mathilda.jpg"));
 
         panes = new ArrayList<>();
         for (Tortue t : tortue) {
@@ -41,5 +39,8 @@ public class PageVente extends JFrame {
         for (JPanel p : panes) {
             panel.add(p);
         }
+        
+        setContentPane(panel);
+        setVisible(true);
     }
 }
