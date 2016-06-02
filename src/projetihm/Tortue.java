@@ -38,18 +38,23 @@ public class Tortue extends JPanel{
     public JPanel toPanel() {
         JPanel rep;
         rep = new JPanel();
-        rep.setPreferredSize(new Dimension(600, 125));
-        rep.setLayout(new GridLayout(3, 1));
+        rep.setPreferredSize(new Dimension(600, 130));
+        JPanel img;
+        img = new JPanel();
+        img.add(new JLabel(createImageIcon(imgPath)));
+        JPanel txt;
+        txt = new JPanel();
+        txt.setLayout(new GridLayout(7, 1));
         
-        rep.add(new JLabel(createImageIcon(imgPath)));
-        
-        rep.add(new JLabel("Nom: " + nom));
-        rep.add(new JLabel("Espece: " + espece));
-        rep.add(new JLabel("Age :" + age + "ans"));
-        rep.add(new JLabel("Poids: " + poids + "kg"));
-        rep.add(new JLabel("Taille: " + taille + "cm"));
-        rep.add(new JLabel("Sexe: " + sexe));
-        rep.add(new JLabel("Prix: " + prix + "$"));
+        txt.add(new JLabel("Nom: " + nom));
+        txt.add(new JLabel("Espece: " + espece));
+        txt.add(new JLabel("Age :" + age + "ans"));
+        txt.add(new JLabel("Poids: " + poids + "kg"));
+        txt.add(new JLabel("Taille: " + taille + "cm"));
+        txt.add(new JLabel("Sexe: " + sexe));
+        txt.add(new JLabel("Prix: " + prix + "$"));
+        rep.add(img);
+        rep.add(txt);
         rep.setBorder(new LineBorder(Color.GRAY, 1));
         return rep;
     }
