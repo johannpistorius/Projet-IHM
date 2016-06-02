@@ -17,12 +17,16 @@ public class PageVente extends JFrame {
     ArrayList<Tortue> tortue;
     ArrayList<JPanel> panes;
     JPanel panel = new JPanel();
-
+    /**
+     * Constructeur
+     */
     public PageVente() {
         super("Page Vente");
         init();
     }
-
+    /**
+     * Methode d'initialisation
+     */
     public final void init() {
         setSize(800, 1000);
         setResizable(false);
@@ -31,7 +35,7 @@ public class PageVente extends JFrame {
         tortue = new ArrayList<>();
         tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000,"images/Leonardo.jpg"));
         tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000,"images/Mathilda.jpg"));
-
+        
         panes = new ArrayList<>();
         for (Tortue t : tortue) {
             panes.add(t.toPanel());
