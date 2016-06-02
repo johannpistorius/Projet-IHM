@@ -45,7 +45,7 @@ public class Tortue extends JPanel{
     public JPanel toPanel() {
         JPanel rep;
         rep = new JPanel();
-        rep.setPreferredSize(new Dimension(600, 130));
+        rep.setPreferredSize(new Dimension(600, 135));
         
         JPanel img;
         img = new JPanel();

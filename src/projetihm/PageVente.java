@@ -15,7 +15,6 @@ import javax.swing.*;
 public class PageVente extends JFrame {
 
     ArrayList<Tortue> tortue;
-    ArrayList<JPanel> panes;
     JPanel panel = new JPanel();
     /**
      * Constructeur
@@ -36,13 +35,7 @@ public class PageVente extends JFrame {
         tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo", 150, 400, 120, "M", 1000,"images/Leonardo.jpg"));
         tortue.add(new Tortue("tortue geante des Galapagos", "Mathilda", 200, 422, 110, "F", 1000,"images/Mathilda.jpg"));
         
-        panes = new ArrayList<>();
-        for (Tortue t : tortue) {
-            panes.add(t.toPanel());
-        }
-        for (JPanel p : panes) {
-            panel.add(p);
-        }
+        Affichage.afficherListe(panel, tortue);
         
         setContentPane(panel);
         setVisible(true);
