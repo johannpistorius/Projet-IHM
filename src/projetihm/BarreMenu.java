@@ -12,11 +12,11 @@ import javax.swing.*;
 
 /**
  *
- * @author tbour_000
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class BarreMenu extends JPanel{
-    JButton triNom;
-    JButton triEspece;
+    JComboBox box;
+    JButton button;
     PageVente container;
     /**
      * Constructeur
@@ -28,24 +28,28 @@ public class BarreMenu extends JPanel{
         init();
     }
     
-    public void init(){
+    public final void init(){
         setPreferredSize(new Dimension(750, 100));
-        triNom =new JButton("Tri par nom");
-        triNom.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                container.setListe(Tri.triParNom(container.getListe()));
+        setBackground(Color.GRAY);
+        box=new JComboBox();
+        box.addItem("Tri par nom");
+        box.addItem("Tri par Espece");
+        button=new JButton(new AbstractAction("Trier"){
+             @Override
+            public void actionPerformed( ActionEvent e ) {
+                String select = box.getSelectedItem().toString();
+                if(select.equals("Tri par nom"))
+                {
+                    container.setListe(Tri.triParNom(container.getListe()));
+                }
+                else if(select.equals("Tri par nom"))
+                {
+                    container.setListe(Tri.triParEspece(container.getListe()));
+                }
             }
         });
-        add(triNom);
-        triEspece =new JButton("Tri par espece");
-        triEspece.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                container.setListe(Tri.triParEspece(container.getListe()));
-            }
-        });
-        add(triEspece);
+        add(box);
+        add(button);
     }
 
 }

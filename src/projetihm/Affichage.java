@@ -10,7 +10,7 @@ import javax.swing.*;
 
 /**
  *
- * @author tbour_000
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class Affichage {
 

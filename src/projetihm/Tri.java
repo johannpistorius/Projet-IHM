@@ -9,7 +9,7 @@ import java.util.*;
 
 /**
  *
- * @author tbour_000
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class Tri {
     public static ArrayList<Tortue> triParNom(List<Tortue> l){
