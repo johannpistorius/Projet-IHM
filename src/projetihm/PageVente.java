@@ -39,6 +39,14 @@ public class PageVente extends JFrame {
                 200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
         tortue.add(new Tortue("tortue geante des Galapagos", "Leonardo",
                 150, 400, 120, "M", 1000, "images/Leonardo.jpg"));
+        tortue.add(new Tortue("a", "a",
+                200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
+        tortue.add(new Tortue("z", "z",
+                200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
+        tortue.add(new Tortue("e", "e",
+                200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
+        tortue.add(new Tortue("r", "r",
+                200, 422, 110, "F", 1000, "images/Mathilda.jpg"));
         tortueSel = tortue;
         majAffichage();
     }

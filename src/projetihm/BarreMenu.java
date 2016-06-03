@@ -16,6 +16,7 @@ import javax.swing.*;
  */
 public class BarreMenu extends JPanel{
     JButton triNom;
+    JButton triEspece;
     PageVente container;
     /**
      * Constructeur
@@ -37,6 +38,14 @@ public class BarreMenu extends JPanel{
             }
         });
         add(triNom);
+        triEspece =new JButton("Tri par espece");
+        triEspece.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                container.setListe(Tri.triParEspece(container.getListe()));
+            }
+        });
+        add(triEspece);
     }
 
 }
