@@ -34,6 +34,10 @@ public class BarreMenu extends JPanel{
         box=new JComboBox();
         box.addItem("Tri par nom");
         box.addItem("Tri par Espece");
+        box.addItem("Tri par Poids");
+        box.addItem("Tri par Taille");
+        box.addItem("Tri par Sexe");
+        box.addItem("Tri par Prix");
         button=new JButton(new AbstractAction("Trier"){
              @Override
             public void actionPerformed( ActionEvent e ) {
@@ -42,9 +46,25 @@ public class BarreMenu extends JPanel{
                 {
                     container.setListe(Tri.triParNom(container.getListe()));
                 }
-                else if(select.equals("Tri par nom"))
+                else if(select.equals("Tri par Espece"))
                 {
                     container.setListe(Tri.triParEspece(container.getListe()));
+                }
+                else if(select.equals("Tri par Poids"))
+                {
+                    container.setListe(Tri.triParPoids(container.getListe()));
+                }
+                else if(select.equals("Tri par Taille"))
+                {
+                    container.setListe(Tri.triParTaille(container.getListe()));
+                }
+                else if(select.equals("Tri par Sexe"))
+                {
+                    container.setListe(Tri.triParSexe(container.getListe()));
+                }
+                else if(select.equals("Tri par Prix"))
+                {
+                    container.setListe(Tri.triParPrix(container.getListe()));
                 }
             }
         });
