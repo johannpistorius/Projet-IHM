@@ -18,6 +18,7 @@ public class FiltreVue extends JPanel{
     JComboBox box_prix;
     JComboBox box_poids;
     JComboBox box_taille;
+    JComboBox box_sexe;
     JComboBox box;
     JButton button;
     PageVente container;
@@ -49,12 +50,16 @@ public class FiltreVue extends JPanel{
         box_prix.addItem("500 - 1500");
         box_prix.addItem("1500 - 3000");
         box_prix.addItem("3000 et +");
+        box_sexe=new JComboBox();
+        box_sexe.addItem("M");
+        box_sexe.addItem("F");
         button=new JButton(new AbstractAction("Filtrer"){
             @Override
             public void actionPerformed( ActionEvent e ) {
                 int select_pd = box_poids.getSelectedIndex();
                 int select_ta = box_taille.getSelectedIndex();
                 int select_pr = box_prix.getSelectedIndex();
+                int select_sexe = box_sexe.getSelectedIndex();
                 switch(select_pd){
                     case 0: container.setListe(Filtre.filtreParPoids(container.getListe(), 0, 200));
                         break;
@@ -85,6 +90,12 @@ public class FiltreVue extends JPanel{
                     case 3:container.setListe(Filtre.filtreParPrix(container.getListe(), 3000, Integer.MAX_VALUE));
                         break;
                 }
+                switch (select_sexe){
+                    case 0:container.setListe(Filtre.filtreParSexe(container.getListe(), "M"));
+                        break;
+                    case 1:container.setListe(Filtre.filtreParSexe(container.getListe(), "F"));
+                        break;
+                }
             }
         });
         add(new JLabel("Taille :"));
@@ -93,6 +104,8 @@ public class FiltreVue extends JPanel{
         add(box_poids);
         add(new JLabel("Prix :"));
         add(box_prix);
+        add(new JLabel("Sexe :"));
+        add(box_sexe);
         add(button);
     }
 

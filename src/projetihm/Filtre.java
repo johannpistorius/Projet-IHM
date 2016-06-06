@@ -36,4 +36,12 @@ public class Filtre {
         });
         return gardee;
     }
+    
+    public static ArrayList<Tortue> filtreParSexe(List<Tortue> l, String s) {
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((Tortue t) -> (s.equals(t.sexe))).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
 }
