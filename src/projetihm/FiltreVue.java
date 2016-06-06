@@ -19,6 +19,7 @@ public class FiltreVue extends JPanel{
     JComboBox box_poids;
     JComboBox box_taille;
     JComboBox box_sexe;
+    JComboBox box_age;
     JComboBox box;
     JButton button;
     PageVente container;
@@ -53,6 +54,12 @@ public class FiltreVue extends JPanel{
         box_sexe=new JComboBox();
         box_sexe.addItem("M");
         box_sexe.addItem("F");
+        box_age=new JComboBox();
+        box_age.addItem("0 - 50");
+        box_age.addItem("50 - 100");
+        box_age.addItem("100 - 150");
+        box_age.addItem("150 - 200");
+        box_age.addItem("200 et +");
         button=new JButton(new AbstractAction("Filtrer"){
             @Override
             public void actionPerformed( ActionEvent e ) {
@@ -60,6 +67,7 @@ public class FiltreVue extends JPanel{
                 int select_ta = box_taille.getSelectedIndex();
                 int select_pr = box_prix.getSelectedIndex();
                 int select_sexe = box_sexe.getSelectedIndex();
+                int select_age = box_age.getSelectedIndex();
                 switch(select_pd){
                     case 0: container.setListe(Filtre.filtreParPoids(container.getListe(), 0, 200));
                         break;
@@ -96,6 +104,19 @@ public class FiltreVue extends JPanel{
                     case 1:container.setListe(Filtre.filtreParSexe(container.getListe(), "F"));
                         break;
                 }
+                
+                switch(select_age){
+                    case 0:container.setListe(Filtre.filtreParAge(container.getListe(), 0, 50));
+                        break;
+                    case 1:container.setListe(Filtre.filtreParAge(container.getListe(), 50, 100));
+                        break;
+                    case 2:container.setListe(Filtre.filtreParAge(container.getListe(), 100, 150));
+                        break;
+                    case 3:container.setListe(Filtre.filtreParAge(container.getListe(), 150, 200));
+                        break;
+                    case 4:container.setListe(Filtre.filtreParAge(container.getListe(), 200, Integer.MAX_VALUE));
+                        break;
+                }
             }
         });
         add(new JLabel("Taille :"));
@@ -106,6 +127,8 @@ public class FiltreVue extends JPanel{
         add(box_prix);
         add(new JLabel("Sexe :"));
         add(box_sexe);
+        add(new JLabel("Age :"));
+        add(box_age);
         add(button);
     }
 

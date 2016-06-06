@@ -44,4 +44,12 @@ public class Filtre {
         });
         return gardee;
     }
+    
+    public static ArrayList<Tortue> filtreParAge(List<Tortue> l, int b1, int b2) {
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((t) -> (b1 < t.age && t.age < b2)).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
 }
