@@ -37,24 +37,29 @@ public class FiltreVue extends JPanel{
         setPreferredSize(new Dimension(100, 750));
         setBackground(Color.GRAY);
         box_poids=new JComboBox();
+        box_poids.addItem("");
         box_poids.addItem("0 - 200");
         box_poids.addItem("200 - 400");
         box_poids.addItem("400 - 600");
         box_poids.addItem("600 et +");
         box_taille=new JComboBox();
+        box_taille.addItem("");
         box_taille.addItem("0 - 100");
         box_taille.addItem("100 - 200");
         box_taille.addItem("200 - 300");
         box_taille.addItem("300 et +");
         box_prix=new JComboBox();
+        box_prix.addItem("");
         box_prix.addItem("0 - 500");
         box_prix.addItem("500 - 1500");
         box_prix.addItem("1500 - 3000");
         box_prix.addItem("3000 et +");
         box_sexe=new JComboBox();
+        box_sexe.addItem("");
         box_sexe.addItem("M");
         box_sexe.addItem("F");
         box_age=new JComboBox();
+        box_age.addItem("");
         box_age.addItem("0 - 50");
         box_age.addItem("50 - 100");
         box_age.addItem("100 - 150");
@@ -69,52 +74,52 @@ public class FiltreVue extends JPanel{
                 int select_sexe = box_sexe.getSelectedIndex();
                 int select_age = box_age.getSelectedIndex();
                 switch(select_pd){
-                    case 0: container.setListe(Filtre.filtreParPoids(container.getListe(), 0, 200));
+                    case 1: container.setListe(Filtre.filtreParPoids(container.getListe(), 0, 200));
                         break;
-                    case 1:container.setListe(Filtre.filtreParPoids(container.getListe(), 200, 400));
+                    case 2:container.setListe(Filtre.filtreParPoids(container.getListe(), 200, 400));
                         break;
-                    case 2:container.setListe(Filtre.filtreParPoids(container.getListe(), 400, 600));
+                    case 3:container.setListe(Filtre.filtreParPoids(container.getListe(), 400, 600));
                         break;
-                    case 3:container.setListe(Filtre.filtreParPoids(container.getListe(), 600, Integer.MAX_VALUE));
+                    case 4:container.setListe(Filtre.filtreParPoids(container.getListe(), 600, Integer.MAX_VALUE));
                         break;
                 }
                 switch(select_ta){
-                    case 0:container.setListe(Filtre.filtreParTaille(container.getListe(), 0, 100));
+                    case 1:container.setListe(Filtre.filtreParTaille(container.getListe(), 0, 100));
                         break;
-                    case 1:container.setListe(Filtre.filtreParTaille(container.getListe(), 100, 200));
+                    case 2:container.setListe(Filtre.filtreParTaille(container.getListe(), 100, 200));
                         break;
-                    case 2:container.setListe(Filtre.filtreParTaille(container.getListe(), 200, 300));
+                    case 3:container.setListe(Filtre.filtreParTaille(container.getListe(), 200, 300));
                         break;
-                    case 3:container.setListe(Filtre.filtreParTaille(container.getListe(), 300, Integer.MAX_VALUE));
+                    case 4:container.setListe(Filtre.filtreParTaille(container.getListe(), 300, Integer.MAX_VALUE));
                         break;
                 }
                 switch(select_pr){
-                    case 0:container.setListe(Filtre.filtreParPrix(container.getListe(), 0, 500));
+                    case 1:container.setListe(Filtre.filtreParPrix(container.getListe(), 0, 500));
                         break;
-                    case 1:container.setListe(Filtre.filtreParPrix(container.getListe(), 500, 1500));
+                    case 2:container.setListe(Filtre.filtreParPrix(container.getListe(), 500, 1500));
                         break;
-                    case 2:container.setListe(Filtre.filtreParPrix(container.getListe(), 15000, 3000));
+                    case 3:container.setListe(Filtre.filtreParPrix(container.getListe(), 15000, 3000));
                         break;
-                    case 3:container.setListe(Filtre.filtreParPrix(container.getListe(), 3000, Integer.MAX_VALUE));
+                    case 4:container.setListe(Filtre.filtreParPrix(container.getListe(), 3000, Integer.MAX_VALUE));
                         break;
                 }
                 switch (select_sexe){
-                    case 0:container.setListe(Filtre.filtreParSexe(container.getListe(), "M"));
+                    case 1:container.setListe(Filtre.filtreParSexe(container.getListe(), "M"));
                         break;
-                    case 1:container.setListe(Filtre.filtreParSexe(container.getListe(), "F"));
+                    case 2:container.setListe(Filtre.filtreParSexe(container.getListe(), "F"));
                         break;
                 }
                 
                 switch(select_age){
-                    case 0:container.setListe(Filtre.filtreParAge(container.getListe(), 0, 50));
+                    case 1:container.setListe(Filtre.filtreParAge(container.getListe(), 0, 50));
                         break;
-                    case 1:container.setListe(Filtre.filtreParAge(container.getListe(), 50, 100));
+                    case 2:container.setListe(Filtre.filtreParAge(container.getListe(), 50, 100));
                         break;
-                    case 2:container.setListe(Filtre.filtreParAge(container.getListe(), 100, 150));
+                    case 3:container.setListe(Filtre.filtreParAge(container.getListe(), 100, 150));
                         break;
-                    case 3:container.setListe(Filtre.filtreParAge(container.getListe(), 150, 200));
+                    case 4:container.setListe(Filtre.filtreParAge(container.getListe(), 150, 200));
                         break;
-                    case 4:container.setListe(Filtre.filtreParAge(container.getListe(), 200, Integer.MAX_VALUE));
+                    case 5:container.setListe(Filtre.filtreParAge(container.getListe(), 200, Integer.MAX_VALUE));
                         break;
                 }
             }
