@@ -54,6 +54,7 @@ public class PageVente extends JFrame {
     public void majAffichage(){
         panel.removeAll();
         panel.add(new BarreMenu(this));
+        panel.add(new FiltreVue(this));
         Affichage.afficherListe(panel, tortueSel);
 
         setContentPane(panel);

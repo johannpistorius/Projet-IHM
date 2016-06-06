@@ -5,10 +5,35 @@
  */
 package projetihm;
 
+import java.util.*;
+
 /**
  *
  * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class Filtre {
-    
+
+    public static ArrayList<Tortue> filtreParPoids(List<Tortue> l, int b1, int b2) {
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((t) -> (b1 < t.poids && t.poids < b2)).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
+
+    public static ArrayList<Tortue> filtreParTaille(List<Tortue> l, int b1, int b2) {
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((t) -> (b1 < t.taille && t.taille < b2)).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
+
+    public static ArrayList<Tortue> filtreParPrix(List<Tortue> l, int b1, int b2) {
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((t) -> (b1 < t.prix && t.prix < b2)).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
 }
