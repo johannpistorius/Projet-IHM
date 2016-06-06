@@ -20,11 +20,11 @@ public class Affichage {
     public static void afficherListe(JPanel p_dest, List<Tortue> l){
         
         List <JPanel> panes = new ArrayList<>();
-        for (Tortue t : l) {
+        l.stream().forEach((t) -> {
             panes.add(t.toPanel());
-        }
-        for (JPanel p : panes) {
+        });
+        panes.stream().forEach((p) -> {
             p_dest.add(p);
-        }
+        });
     }
 }

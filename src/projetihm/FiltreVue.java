@@ -49,10 +49,10 @@ public class FiltreVue extends JPanel{
         box_prix.addItem("500 - 1500");
         box_prix.addItem("1500 - 3000");
         box_prix.addItem("3000 et +");
-        button=new JButton(new AbstractAction("Trier"){
+        button=new JButton(new AbstractAction("Filtrer"){
             @Override
             public void actionPerformed( ActionEvent e ) {
-                int select_pd = box.getSelectedIndex();
+                int select_pd = box_poids.getSelectedIndex();
                 int select_ta = box_taille.getSelectedIndex();
                 int select_pr = box_prix.getSelectedIndex();
                 switch(select_pd){
