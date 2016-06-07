@@ -5,6 +5,8 @@
  */
 package projetihm;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.util.*;
 import javax.swing.*;
 
@@ -18,7 +20,7 @@ public class Affichage {
     }
     
     public static void afficherListe(JPanel p_dest, List<Tortue> l){
-        
+        p_dest.setLayout(new GridLayout(l.size(), 1, 1, 5));
         List <JPanel> panes = new ArrayList<>();
         l.stream().forEach((t) -> {
             panes.add(t.toPanel());

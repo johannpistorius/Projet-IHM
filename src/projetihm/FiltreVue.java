@@ -34,7 +34,7 @@ public class FiltreVue extends JPanel{
     }
     
     public final void init(){
-        setPreferredSize(new Dimension(100, 750));
+        setPreferredSize(new Dimension(200, 540));
         setBackground(Color.GRAY);
         box_poids=new JComboBox();
         box_poids.addItem("");
@@ -124,15 +124,15 @@ public class FiltreVue extends JPanel{
                 }
             }
         });
-        add(new JLabel("Taille :"));
+        add(new JLabel("Taille :                    "));
         add(box_taille);
-        add(new JLabel("Poids :"));
+        add(new JLabel("Poids :                    "));
         add(box_poids);
-        add(new JLabel("Prix :"));
+        add(new JLabel("Prix :                    "));
         add(box_prix);
-        add(new JLabel("Sexe :"));
+        add(new JLabel("Sexe :                                   "));
         add(box_sexe);
-        add(new JLabel("Age :"));
+        add(new JLabel("Age :                         "));
         add(box_age);
         add(button);
     }

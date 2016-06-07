@@ -30,7 +30,7 @@ public class PageVente extends JFrame {
      * Methode d'initialisation
      */
     public final void init() {
-        setSize(800, 1000);
+        setSize(1000, 700);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -55,8 +55,11 @@ public class PageVente extends JFrame {
         panel.removeAll();
         panel.add(new BarreMenu(this));
         panel.add(new FiltreVue(this));
-        Affichage.afficherListe(panel, tortueSel);
-
+        JPanel liste = new JPanel();
+        Affichage.afficherListe(liste, tortueSel);
+        liste.setSize(800,500);
+        liste.setAutoscrolls(true);
+        panel.add(liste);
         setContentPane(panel);
         setVisible(true);
     }
