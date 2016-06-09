@@ -17,6 +17,8 @@ import javax.swing.*;
 public class BarreMenu extends JPanel{
     JComboBox box;
     JButton button;
+    JTextField search;;
+    JButton search_b;
     PageVente container;
     /**
      * Constructeur
@@ -31,6 +33,14 @@ public class BarreMenu extends JPanel{
     public final void init(){
         setPreferredSize(new Dimension(980, 150));
         setBackground(Color.GRAY);
+        search = new JTextField(20);
+        search_b = new JButton("Rechercher");
+        search_b.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                container.setListe(Recherche.chercheNom(container.getListe(), search.getText()));
+            }
+        });
         box=new JComboBox();
         box.addItem("Tri par nom");
         box.addItem("Tri par Espece");
@@ -66,6 +76,11 @@ public class BarreMenu extends JPanel{
                  }
             }
         });
+        add(new JLabel("Tortuga store"));
+        ((JLabel)getComponent(0)).setFont(new Font("perso", Font.ITALIC + Font.BOLD, 80));
+        add(new JLabel("Recherche :"));
+        add(search);
+        add(search_b);
         add(box);
         add(button);
     }

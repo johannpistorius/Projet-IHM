@@ -5,7 +5,8 @@
  */
 package projetihm;
 
-import java.util.ArrayList;
+import java.awt.*;
+import java.util.*;
 import javax.swing.*;
 
 /**
@@ -55,10 +56,8 @@ public class PageVente extends JFrame {
         panel.removeAll();
         panel.add(new BarreMenu(this));
         panel.add(new FiltreVue(this));
-        JPanel liste = new JPanel();
+        JPanel liste = new JPanel(new GridLayout(20, 1));
         Affichage.afficherListe(liste, tortueSel);
-        liste.setSize(800,500);
-        liste.setAutoscrolls(true);
         panel.add(liste);
         setContentPane(panel);
         setVisible(true);

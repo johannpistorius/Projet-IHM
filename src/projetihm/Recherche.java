@@ -5,10 +5,18 @@
  */
 package projetihm;
 
+import java.util.*;
+
 /**
  *
  * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
  */
 public class Recherche {
-    
+    public static ArrayList<Tortue> chercheNom(ArrayList<Tortue> l, String s){
+        ArrayList<Tortue> gardee = new ArrayList<>();
+        l.stream().filter((t) -> (t.nom.toLowerCase().contains(s.toLowerCase()))).forEach((t) -> {
+            gardee.add(t);
+        });
+        return gardee;
+    }
 }
