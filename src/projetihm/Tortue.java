@@ -6,6 +6,7 @@
 package projetihm;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -63,6 +64,13 @@ public class Tortue extends JPanel{
         txt.add(new JLabel("Prix: " + prix + "$"));
         rep.add(img);
         rep.add(txt);
+        rep.add(new JButton("Acheter"));
+        ((JButton)rep.getComponent(2)).addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ProjetIHM .facturation();
+            }
+        });
         rep.setBorder(new LineBorder(Color.GRAY, 1));
         return rep;
     }

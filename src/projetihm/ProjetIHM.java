@@ -11,12 +11,20 @@ package projetihm;
  */
 public class ProjetIHM {
 
+    static PageVente pv;
+    static PageFacturation pf;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        PageVente test = new PageVente();
+        pv = new PageVente();
+    }
+    
+    public static void facturation(){
+        pv.dispose();
+        pf = new PageFacturation();
+        
     }
 
 }
