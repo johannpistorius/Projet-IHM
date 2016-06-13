@@ -122,9 +122,9 @@ public class FiltreVue extends JPanel{
                 }
             }
         });
-        add(new JLabel("Taille (kg) :              "));
+        add(new JLabel("Taille (cm) :              "));
         add(box_taille);
-        add(new JLabel("Poids (cm) :             "));
+        add(new JLabel("Poids (kg) :             "));
         add(box_poids);
         add(new JLabel("Prix :                    "));
         add(box_prix);

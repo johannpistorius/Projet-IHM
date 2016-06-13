@@ -40,7 +40,11 @@ public class BarreMenu extends JPanel {
         search_b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                container.setListe(Recherche.chercheNom(container.getListe(), search.getText()));
+                if (search.getText().isEmpty()) {
+                    container.setListe(container.tortue);
+                } else {
+                    container.setListe(Recherche.chercheNom(container.getListe(), search.getText()));
+                }
             }
         });
         box = new JComboBox();
