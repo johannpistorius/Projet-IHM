@@ -17,6 +17,11 @@ public class Tri {
         Collections.sort(l, (Tortue t1, Tortue t2) -> t1.nom.compareTo(t2.nom));
         return (ArrayList<Tortue>) l;
     }
+    
+    public static ArrayList<Tortue> triParAge(List<Tortue> l) {
+        Collections.sort(l, (Tortue t1, Tortue t2) -> t1.age - t2.age);
+        return (ArrayList<Tortue>) l;
+    }
 
     public static ArrayList<Tortue> triParEspece(List<Tortue> l) {
         Collections.sort(l, (Tortue t1, Tortue t2) -> t1.espece.compareTo(t2.espece));

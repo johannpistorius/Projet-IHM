@@ -27,5 +27,8 @@ public class Affichage {
         panes.stream().forEach((p) -> {
             p_dest.add(p);
         });
+        if(l.isEmpty()){
+            p_dest.add(new JLabel("Aucune tortue ne correspond à vos critères."));
+        }
     }
 }

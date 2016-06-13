@@ -48,6 +48,7 @@ public class BarreMenu extends JPanel {
         box.addItem("Tri par Espece");
         box.addItem("Tri par Poids");
         box.addItem("Tri par Taille");
+        box.addItem("Tri par Age");
         box.addItem("Tri par Sexe");
         box.addItem("Tri par Prix");
         button = new JButton(new AbstractAction("Trier") {
@@ -72,6 +73,9 @@ public class BarreMenu extends JPanel {
                         break;
                     case "Tri par Prix":
                         container.setListe(Tri.triParPrix(container.getListe()));
+                        break;
+                    case "Tri par Age":
+                        container.setListe(Tri.triParAge(container.getListe()));
                         break;
                     default:
                         break;
