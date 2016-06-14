@@ -15,10 +15,16 @@ import javax.swing.*;
  * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Affichage {
-
+    /**
+     * Constructeur
+     */
     public Affichage() {
     }
-    
+    /**
+     * Gere l'affichage des tortues
+     * @param p_dest JPanel
+     * @param l list de tortue
+     */
     public static void afficherListe(JPanel p_dest, List<Tortue> l){
         List <JPanel> panes = new ArrayList<>();
         l.stream().forEach((t) -> {

@@ -80,7 +80,9 @@ public class PageVente extends JFrame {
         tortueSel = tortue;
         majAffichage();
     }
-
+    /**
+     * Gere affichage
+     */
     public void majAffichage() {
         panel.removeAll();
         panel.add(new Bandeau());
@@ -96,11 +98,17 @@ public class PageVente extends JFrame {
         setContentPane(panel);
         setVisible(true);
     }
-
+    /**
+     * Get liste tortue
+     * @return liste de tortue
+     */
     public ArrayList<Tortue> getListe() {
         return tortueSel;
     }
-
+    /**
+     * Set liste tortue
+     * @param l liste de tortue
+     */
     public void setListe(ArrayList<Tortue> l) {
         tortueSel = l;
         majAffichage();

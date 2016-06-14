@@ -20,7 +20,9 @@ public class ProjetIHM {
         // TODO code application logic here
         pv = new PageVente();
     }
-    
+    /**
+     * Page Facturaction
+     */
     public static void facturation(){
         pv.dispose();
         pf = new PageFacturation();

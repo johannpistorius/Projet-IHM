@@ -32,7 +32,9 @@ public class FiltreVue extends JPanel{
         container = pv;
         init();
     }
-    
+    /**
+     * Initialise les filtres
+     */
     public final void init(){
         box_poids=new JComboBox();
         box_poids.addItem("");

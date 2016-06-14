@@ -16,15 +16,12 @@ import javax.swing.*;
 public class BarreMenu extends JPanel {
 
     JComboBox box;
-    JButton button;
+    JButton button,search_b,reload;
     JTextField search;
-    ;
-    JButton search_b;
     PageVente container;
 
     /**
      * Constructeur
-     *
      * @param pv la page principale
      */
     public BarreMenu(PageVente pv) {
@@ -32,7 +29,9 @@ public class BarreMenu extends JPanel {
         container = pv;
         init();
     }
-
+    /**
+     * Initialise la barre de menu
+     */
     public final void init() {
         // setPreferredSize(new Dimension(100, 50));
         search = new JTextField(20);
@@ -41,7 +40,7 @@ public class BarreMenu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (search.getText().isEmpty()) {
-                    container.setListe(container.tortue);
+                    //do nothing
                 } else {
                     container.setListe(Recherche.chercheNom(container.getListe(), search.getText()));
                 }
@@ -86,11 +85,18 @@ public class BarreMenu extends JPanel {
                 }
             }
         });
+        reload = new JButton(new AbstractAction("Recharger"){
+           @Override
+           public void actionPerformed(ActionEvent e){
+               container.setListe(container.tortue);
+           }
+        });
         add(new JLabel("Recherche :"));
         add(search);
         add(search_b);
         add(box);
         add(button);
+        add(reload);
     }
 
 }

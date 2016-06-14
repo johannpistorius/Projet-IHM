@@ -12,6 +12,12 @@ import java.util.*;
  * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Recherche {
+    /**
+     * Retourne liste de tortue correspondant a la recherche
+     * @param l liste de tortue
+     * @param s String recherche
+     * @return liste de tortue
+     */
     public static ArrayList<Tortue> chercheNom(ArrayList<Tortue> l, String s){
         ArrayList<Tortue> gardee = new ArrayList<>();
         l.stream().filter((t) -> (t.nom.toLowerCase().contains(s.toLowerCase()))).forEach((t) -> {
