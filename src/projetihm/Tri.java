@@ -8,8 +8,8 @@ package projetihm;
 import java.util.*;
 
 /**
- *
- * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
+ * Classe contenant des méthodes qui trie la liste affichée à l'écran
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Tri {
 

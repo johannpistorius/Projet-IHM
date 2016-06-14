@@ -8,8 +8,8 @@ package projetihm;
 import java.util.*;
 
 /**
- *
- * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
+ * Classe statique qui recherche une chaine dans le nom des tortues affichées
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Recherche {
     public static ArrayList<Tortue> chercheNom(ArrayList<Tortue> l, String s){

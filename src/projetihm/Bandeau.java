@@ -10,7 +10,7 @@ import javax.swing.*;
 
 /**
  *
- * @author tbour_000
+ * @author BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Bandeau extends JPanel {
 
@@ -22,6 +22,9 @@ public class Bandeau extends JPanel {
         init();
     }
     
+    /**
+     * Méthode d'initialisation
+     */
     public void init(){
         setPreferredSize(new Dimension(1000, 100));
         add(new JLabel(new ImageIcon(getClass().getResource("images/tortuga.png"))));

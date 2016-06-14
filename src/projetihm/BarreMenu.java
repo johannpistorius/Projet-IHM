@@ -11,7 +11,7 @@ import javax.swing.*;
 
 /**
  *
- * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class BarreMenu extends JPanel {
 

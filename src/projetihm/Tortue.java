@@ -12,7 +12,7 @@ import javax.swing.border.*;
 
 /**
  *
- * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann
+ * @authors BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class Tortue extends JPanel{
 
@@ -75,7 +75,7 @@ public class Tortue extends JPanel{
         return rep;
     }
     /**
-     * Retourne l'image d'une tortue si le path est correcte
+     * Retourne l'image d'une tortue si le path est correct
      * Sinon, retourne null avec un message d'erreur
      * @param path
      * @return image

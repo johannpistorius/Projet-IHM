@@ -10,7 +10,7 @@ import javax.swing.*;
 
 /**
  *
- * @author tbour_000
+ * @author BOURG Thomas, KOUSONSAVATH Sanlasun, PISTORIUS Johann, GIRARD Mihajlo
  */
 public class PageFacturation extends JFrame {
 
